@@ -29,7 +29,7 @@ export default function Register() {
     try {
       register(form.name, form.username, form.password);
 
-      alert("Register berhasil");
+      alert("Registration successful");
 
       navigate("/login");
     } catch (err) {

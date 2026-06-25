@@ -2,11 +2,13 @@ import { useContext, useState, useEffect, useMemo } from "react";
 import useAuth from "../hooks/useAuth";
 import { ExpenseContext } from "../context/ExpenseContext";
 import { CategoryContext } from "../context/CategoryContext";
-import { ChevronRight, SlidersHorizontal } from "lucide-react";
+import { ChevronRight, SlidersHorizontal, Trash2 } from "lucide-react";
+import ClearExpense from "./ClearExpense";
 
 const ExpenseFilter = () => {
   const { currentUser } = useAuth();
-  const { expenses, updateExpenseCategory } = useContext(ExpenseContext);
+  const { expenses, updateExpenseCategory, clearExpenses } =
+    useContext(ExpenseContext);
   const { categories } = useContext(CategoryContext);
 
   const [filteredExpenses, setFilteredExpenses] = useState([]);
@@ -59,6 +61,11 @@ const ExpenseFilter = () => {
     setOnClick(!onClick);
   };
 
+  const handleDeleteExpenses = () => {
+    alert("Are you sure you want to delete all expense data?");
+    clearExpenses();
+  };
+
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-col gap-2 text-lg">
@@ -100,10 +107,18 @@ const ExpenseFilter = () => {
           </div>
         </div>
       </div>
-
+      {filteredExpenses.length > 10 && <ClearExpense />}
       {/* List expense sesuai filter + bisa update kategori */}
       <div className="flex flex-col gap-2">
-        <p className="text-base font-medium">Expense List</p>
+        <div className="flex justify-between items-center ">
+          <p className="text-base font-medium">Expense List</p>
+          <button
+            className="flex text-sm items-center gap-1 cursor-pointer text-red-600/70 hover:text-red-600"
+            onClick={handleDeleteExpenses}>
+            <Trash2 width={14} height={14} />
+            Delete All
+          </button>
+        </div>
         <div className="flex flex-wrap gap-1">
           {filteredExpenses.map((expense) => (
             <div

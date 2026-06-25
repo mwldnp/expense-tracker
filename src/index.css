@@ -13,6 +13,6 @@
   }
 
   main {
-    @apply px-4 pt-4;
+    @apply px-4 pt-4 min-h-screen;
   }
 }

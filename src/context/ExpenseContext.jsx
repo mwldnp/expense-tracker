@@ -39,9 +39,15 @@ export default function ExpenseProvider({ children }) {
     setExpenses(updatedExpenseList);
   };
 
+  // Fungsi untuk menghapus semua expense
+  const clearExpenses = () => {
+    setExpenses([]);
+    localStorage.removeItem("expenses");
+  };
+
   return (
     <ExpenseContext.Provider
-      value={{ addExpense, expenses, updateExpenseCategory }}>
+      value={{ addExpense, expenses, updateExpenseCategory, clearExpenses }}>
       {children}
     </ExpenseContext.Provider>
   );

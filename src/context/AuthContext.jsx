@@ -24,8 +24,8 @@ export default function AuthProvider({ children }) {
       (user) => user.username === username,
     );
 
-    if (nameExists) throw new Error("Nama sudah digunakan!");
-    if (userNameExists) throw new Error("Username sudah digunakan!");
+    if (nameExists) throw new Error("Name already in taken!");
+    if (userNameExists) throw new Error("Username already in taken!");
 
     // Hash password dengan bcryptjs
     const hashedPassword = bcrypt.hashSync(password, 10);
