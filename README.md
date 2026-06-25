@@ -1,87 +1,146 @@
 # 💰 Expense Tracker
 
-A simple and modern Expense Tracker application built with React.js, Context API, and TailwindCSS.
+A modern and responsive expense tracking application built with **React.js, Context API, and TailwindCSS.**
 
-Track your daily expenses, organize categories, and monitor spending with a clean and responsive interface.
+This project helps users record daily expenses, manage categories, and monitor spending habits through a simple and intuitive interface.
 
----
-
-## 📸 Preview
-### Login Page
-- Clean and modern authentication page
-- Remember me functionality
-- Responsive mobile-first design
-
-### Dashboard
-- Total expense summary
-- Expense filtering
-- Category management
-- Expense history list
-
-Add screenshots or GIF previews here
-
-![Dashboard](./public/dashboard-preview.png)
-![Login](./public/login-preview.png)
-
----
 
 ## 🚀 Features
-- **Authentication**: login user (via custom hook `useAuth`).
-- **Expense Management**:
-  - Tambah pengeluaran dengan kategori, jumlah, dan catatan.
-  - Edit kategori pengeluaran langsung dari daftar.
-  - Hapus atau reset form dengan mudah.
-- **Category Management**:
-  - Filter pengeluaran berdasarkan kategori.
-  - Hitung total pengeluaran per kategori atau semua kategori.
-- **UI/UX**:
-  - Modal untuk menambah expense.
-  - Dropdown filter dengan animasi icon.
-  - Responsive design menggunakan TailwindCSS.
 
----
+**🔐 Authentication**
+
+- Login system
+- Protected routes
+- Custom `useAuth()` hook
+- Logout functionality
+
+**💵 Expense Management**
+
+- Add new expense
+- Track expense amount
+- Add expense description
+- Record expense date
+- Real-time total expense calculation
+
+**🏷️ Category Management**
+
+- Create custom categories
+- Manage expense categories
+- Dynamic category selection
+- Category-based filtering
+
+**🔍 Expense Filtering**
+
+- Filter expenses by category
+- View all expenses
+- Instant filtering results
+
+**📊 Expense Summary**
+
+- Total expense overview
+- Categorized expense records
+- Clean transaction history display
+
+**🎨 UI / UX**
+
+- Modern finance-inspired design
+- Mobile-first responsive layout
+- Reusable component architecture
+- Modal-based forms
+- Smooth interactions
+- TailwindCSS styling
+
+## 📸 Screenshots
+
+<table>
+  <tr>
+    <td align="center">
+      <strong>Login Page</strong><br>
+      <img src="./public/login-preview.png" alt="Login Page" width="220">
+    </td>
+    <td align="center">
+      <strong>Dashboard</strong><br>
+      <img src="./public/dashboard-preview.png" alt="Dashboard" width="220">
+    </td>
+  </tr>
+</table>
+
 
 ## 🛠️ Tech Stack
-- **React.js** (Vite)
-- **Context API** (ExpenseContext, CategoryContext)
-- **TailwindCSS** untuk styling
-- **Lucide-react** untuk icon
-- **React Router** untuk navigasi
 
----
-
+| Technology | Description |
+|------------|-------------|
+| React.js | Frontend Library |
+| Vite | Development Environment |
+| Context API | Global State Management |
+| React Router DOM | Routing |
+| TailwindCSS | Styling |
+| Lucide React | Icons |
 ## 📂 Project Structure
-src/
+
+```
+src
+│
 ├── components/
-│    ├── AddExpenseModal.jsx   # Modal untuk tambah expense
-│    ├── ExpenseFilter.jsx     # Filter & daftar expense
-│    └── ui/Button.jsx         # Reusable button component
+│   ├── AddCategoryModal.jsx
+│   ├── AddExpenseModal.jsx
+│   ├── ExpenseFilter.jsx
+│   ├── ProtectedRoute.jsx
+│   │
+│   └── ui/
+│       ├── Button.jsx
+│       └── ErrorAlert.jsx
 │
 ├── context/
-│    ├── ExpenseContext.jsx    # State global untuk expense
-│    └── CategoryContext.jsx   # State global untuk kategori
+│   ├── AuthContext.jsx
+│   ├── CategoryContext.jsx
+│   └── ExpenseContext.jsx
 │
 ├── hooks/
-│    └── useAuth.js            # Custom hook untuk user auth
+│   └── useAuth.js
+│
+├── layouts/
+│   └── RootLayout.jsx
+│
+├── pages/
+│   ├── Dashboard.jsx
+│   ├── ErrorPage.jsx
+│   ├── Login.jsx
+│   ├── Logout.jsx
+│   └── Register.jsx
+│
+├── routes/
+│   └── AppRoutes.jsx
 │
 ├── App.jsx
+├── index.css
 └── main.jsx
-
-
----
-
+```
 ## ⚙️ Installation
-1. Clone repository:
-   ```bash
-   git clone https://github.com/username/expense-tracker.git
-   cd expense-tracker
 
-2. Install dependencies:
+**1. Clone Repository**
 
-bash
+```
+git clone https://github.com/mwldnp/expense-tracker.git
+cd expense-tracker
+```
+
+**2. Install Dependencies**
+```
 npm install
+```
 
-3. Jalankan aplikasi:
-
-bash
+**3. Run Development Server**
+```
 npm run dev
+```
+## 🌐 Live Demo
+
+https://expense-tracker-bywildan.vercel.app
+
+
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://wildanpratama.vercel.app//)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/mwldnp)
+[![twitter](https://img.shields.io/badge/instagram-1DA1F2?style=for-the-badge&logo=instagram)](https://instagram.com/mwldnp)
+
