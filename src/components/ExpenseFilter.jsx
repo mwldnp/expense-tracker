@@ -60,7 +60,7 @@ const ExpenseFilter = () => {
   };
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-4">
       <div className="flex flex-col gap-2 text-lg">
         <div className="flex items-center gap-2">
           <SlidersHorizontal className="text-primary" width={16} height={16} />
@@ -109,7 +109,7 @@ const ExpenseFilter = () => {
             <div
               key={expense.id}
               className="p-3 w-full bg-secondary rounded-lg">
-              <div className="flex gap-3 items-center">
+              <div className="flex gap-3 items-center justify-between">
                 <div className="flex flex-col gap-1">
                   <p className="text-base font-bold">{expense.note}</p>
                   <div className="flex flex-wrap gap-x-2 items-center">

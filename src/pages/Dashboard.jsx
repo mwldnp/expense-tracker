@@ -6,6 +6,7 @@ import { useMemo } from "react";
 import ExpenseFilter from "../components/ExpenseFilter";
 import { NavLink } from "react-router-dom";
 import AddExpenseModal from "../components/AddExpenseModal";
+import Logo from "../../public/logo/Logo.png";
 
 export default function Dashboard() {
   const { currentUser } = useAuth();
@@ -35,12 +36,12 @@ export default function Dashboard() {
       <header className="mb-3">
         <div className="flex justify-between items-center mb-3">
           <div className="flex items-center gap-3">
-            <div className="bg-secondary w-10 h-10 flex justify-center items-center rounded-full">
-              🍃
+            <div className="bg-secondary w-10 h-10 flex justify-center items-center rounded-md overflow-hidden">
+              <img src={Logo} alt="" />
             </div>
             <div>
-              <p className="font-bold">Expense</p>
-              <p className="font-bold text-primary">Tracker</p>
+              <p className="font-bold leading-[120%]">Expense</p>
+              <p className="font-bold leading-[120%] text-primary">Tracker</p>
             </div>
           </div>
           <button>

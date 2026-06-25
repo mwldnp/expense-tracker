@@ -1,6 +1,6 @@
 const ErrorAlert = ({ message, onClose }) => {
   return (
-    <div className="flex gap-2 justify-between items-center text-center px-3 py-4 rounded-lg bg-red-200 border border-red-500 mb-3">
+    <div className="flex gap-2 justify-between items-center text-center px-3 py-4 rounded-lg bg-red-200 border border-red-500">
       <p className="text-red-800">{message}</p>
       <button
         onClick={onClose}

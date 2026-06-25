@@ -1,16 +1,87 @@
-# React + Vite
+# 💰 Expense Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and modern Expense Tracker application built with React.js, Context API, and TailwindCSS.
 
-Currently, two official plugins are available:
+Track your daily expenses, organize categories, and monitor spending with a clean and responsive interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📸 Preview
+### Login Page
+- Clean and modern authentication page
+- Remember me functionality
+- Responsive mobile-first design
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Dashboard
+- Total expense summary
+- Expense filtering
+- Category management
+- Expense history list
 
-## Expanding the ESLint configuration
+Add screenshots or GIF previews here
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![Dashboard](./public/dashboard-preview.png)
+![Login](./public/login-preview.png)
+
+---
+
+## 🚀 Features
+- **Authentication**: login user (via custom hook `useAuth`).
+- **Expense Management**:
+  - Tambah pengeluaran dengan kategori, jumlah, dan catatan.
+  - Edit kategori pengeluaran langsung dari daftar.
+  - Hapus atau reset form dengan mudah.
+- **Category Management**:
+  - Filter pengeluaran berdasarkan kategori.
+  - Hitung total pengeluaran per kategori atau semua kategori.
+- **UI/UX**:
+  - Modal untuk menambah expense.
+  - Dropdown filter dengan animasi icon.
+  - Responsive design menggunakan TailwindCSS.
+
+---
+
+## 🛠️ Tech Stack
+- **React.js** (Vite)
+- **Context API** (ExpenseContext, CategoryContext)
+- **TailwindCSS** untuk styling
+- **Lucide-react** untuk icon
+- **React Router** untuk navigasi
+
+---
+
+## 📂 Project Structure
+src/
+├── components/
+│    ├── AddExpenseModal.jsx   # Modal untuk tambah expense
+│    ├── ExpenseFilter.jsx     # Filter & daftar expense
+│    └── ui/Button.jsx         # Reusable button component
+│
+├── context/
+│    ├── ExpenseContext.jsx    # State global untuk expense
+│    └── CategoryContext.jsx   # State global untuk kategori
+│
+├── hooks/
+│    └── useAuth.js            # Custom hook untuk user auth
+│
+├── App.jsx
+└── main.jsx
+
+
+---
+
+## ⚙️ Installation
+1. Clone repository:
+   ```bash
+   git clone https://github.com/username/expense-tracker.git
+   cd expense-tracker
+
+2. Install dependencies:
+
+bash
+npm install
+
+3. Jalankan aplikasi:
+
+bash
+npm run dev
