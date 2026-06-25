@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-googlesans: "Google Sans", sans-serif;
+  --color-primary: #31ab6f;
+  --color-secondary: #ebf6f1;
+}
+
+@layer utilities {
+  html {
+    @apply font-googlesans mx-auto max-w-107.5;
+  }
+
+  main {
+    @apply px-4 pt-4;
+  }
+}
