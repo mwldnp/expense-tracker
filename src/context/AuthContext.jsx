@@ -48,10 +48,10 @@ export default function AuthProvider({ children }) {
   const login = (username, password) => {
     const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
     const findUser = storedUsers.find((user) => user.username === username);
-    if (!findUser) throw new Error("Username tidak ditemukan!");
+    if (!findUser) throw new Error("Username not found!");
 
     const isMatch = bcrypt.compareSync(password, findUser.password);
-    if (!isMatch) throw new Error("Password salah!");
+    if (!isMatch) throw new Error("Wrong password!");
 
     localStorage.setItem("currentUser", JSON.stringify(findUser));
     setCurrentUser(findUser);
