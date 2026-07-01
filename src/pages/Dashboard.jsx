@@ -89,7 +89,7 @@ export default function Dashboard() {
         <div className="w-1/2">
           <button
             onClick={() => setIsModaExpenselOpen(true)}
-            className="bg-secondary flex items-center gap-3 px-3 py-2 text-start rounded-xl h-full">
+            className="bg-secondary flex items-center gap-3 px-3 py-2 text-start rounded-xl h-full cursor-pointer">
             <div>
               <div className="w-10 h-10 flex justify-center items-center text-2xl text-white rounded-full bg-primary">
                 +
@@ -112,7 +112,7 @@ export default function Dashboard() {
         <div className="w-1/2">
           <button
             onClick={() => setIsModaCategorylOpen(true)}
-            className="bg-secondary flex items-center gap-3 px-3 py-2 text-start rounded-xl h-full">
+            className="bg-secondary flex items-center gap-3 px-3 py-2 text-start rounded-xl h-full cursor-pointer">
             <div>
               <div className="w-10 h-10 flex justify-center items-center text-xl text-white rounded-full bg-primary">
                 <svg

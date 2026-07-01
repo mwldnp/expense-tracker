@@ -4,6 +4,7 @@ import { ExpenseContext } from "../context/ExpenseContext";
 import { CategoryContext } from "../context/CategoryContext";
 import { ChevronRight, SlidersHorizontal, Trash2 } from "lucide-react";
 import ClearExpense from "./ClearExpense";
+import AddExpenseModal from "./AddExpenseModal";
 
 const ExpenseFilter = () => {
   const { currentUser } = useAuth();
@@ -14,6 +15,7 @@ const ExpenseFilter = () => {
   const [filteredExpenses, setFilteredExpenses] = useState([]);
   const [currentCategories, setCurrentCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [isModalExpenseOpen, setIsModaExpenselOpen] = useState(false);
 
   const [onClick, setOnClick] = useState(false);
 
@@ -64,6 +66,15 @@ const ExpenseFilter = () => {
   const handleDeleteExpenses = () => {
     alert("Are you sure you want to delete all expense data?");
     clearExpenses();
+  };
+
+  const handleAddExpense = (data) => {
+    console.log("Expense added:", data);
+    // panggil addExpense dari context di sini
+  };
+
+  const handleModal = () => {
+    setIsModaExpenselOpen(true);
   };
 
   return (
@@ -120,6 +131,25 @@ const ExpenseFilter = () => {
           </button>
         </div>
         <div className="flex flex-wrap gap-1">
+          {filteredExpenses.length === 0}
+
+          <div className="text-center w-full mt-3">
+            <div className="flex justify-center items-center flex-col">
+              <p className="opacity-70 text-sm">You have no expenses!</p>
+              <button
+                onClick={handleModal}
+                className="text-primary underline text-sm hover:text-primary/70 cursor-pointer">
+                Add new expense
+              </button>
+            </div>
+
+            <AddExpenseModal
+              isOpen={isModalExpenseOpen}
+              onClose={() => setIsModaExpenselOpen(false)}
+              onSubmit={handleAddExpense}
+            />
+          </div>
+
           {filteredExpenses.map((expense) => (
             <div
               key={expense.id}
