@@ -133,7 +133,7 @@ const ExpenseFilter = () => {
         <div className="flex flex-wrap gap-1">
           {filteredExpenses.length === 0}
 
-          <div className="text-center w-full mt-3">
+          <div className="w-full mt-3">
             <div className="flex justify-center items-center flex-col">
               <p className="opacity-70 text-sm">You have no expenses!</p>
               <button
